@@ -43,6 +43,7 @@ module.exports = {
 
   scopes: [
     { name: 'fetch' },
+    { name: 'route' },
     { name: 'package' },
     { name: 'eslint' },
     { name: 'cz' },
