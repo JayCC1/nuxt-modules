@@ -1,0 +1,24 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxi dev",
+    "preview": "nuxi preview"
+  },
+  "devDependencies": {
+    "@spruce-hub/nuxt-fetch": "workspace:^0.0.0",
+    "@spruce-hub/nuxt-route": "workspace:^0.0.0",
+    "nuxt": "^3.3.1",
+    "sass": "^1.60.0",
+    "vue": "^3.2.47"
+  },
+  "browserslist": [
+    "last 2 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead",
+    "not ie <=10",
+    "safari >=7"
+  ]
+}

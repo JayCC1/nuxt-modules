@@ -1,0 +1,55 @@
+{
+  "name": "@spruce-hub/nuxt-route",
+  "version": "0.0.0",
+  "description": "Secure and easy route ability integration with Nuxt.js",
+  "main": "./dist/module.cjs",
+  "module": "./dist/module.mjs",
+  "types": "./dist/module.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    },
+    "./dist/runtime/*": "./dist/runtime/*",
+    "./runtime/*": "./dist/runtime/*",
+    "./*": "./*"
+  },
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "prepack": "nuxt-module-build",
+    "build": "nuxt-module-build",
+    "stub": "nuxt-module-build --stub",
+    "changelog": "conventional-changelog -n '../../changelog.config.js' -i CHANGELOG.md -s -r 0 -k ./package.json --commit-path ./"
+  },
+  "keywords": [
+    "飞讯云杉前端",
+    "Spruce Hub",
+    "Nuxt Modules"
+  ],
+  "author": "Noah Yu",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spruce-hub/nuxt-modules.git",
+    "directory": "packages/route"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=7.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.2.3",
+    "js-cookie": "^3.0.1",
+    "minimatch": "^7.4.3"
+  },
+  "devDependencies": {
+    "@nuxt/module-builder": "^0.2.1",
+    "@nuxt/schema": "^3.2.3",
+    "@types/js-cookie": "^3.0.3"
+  }
+}
