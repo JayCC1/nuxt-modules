@@ -21,7 +21,7 @@ export interface Options {
 
 declare module '@nuxt/schema' {
   interface RuntimeConfig {
-    nuxtFetch: Options
+    nuxtFetch?: Options
   }
 }
 
