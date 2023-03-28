@@ -32,7 +32,7 @@ export interface Options {
 
 declare module '@nuxt/schema' {
   interface NuxtConfig {
-    nuxtRoute: Options
+    nuxtRoute?: Options
   }
 }
 
