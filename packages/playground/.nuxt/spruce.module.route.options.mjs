@@ -1,1 +1,0 @@
-export default {"authPath":["/order"],"loginPath":"/login","tokenName":"access_token","excludePath":["/login","/register"]}

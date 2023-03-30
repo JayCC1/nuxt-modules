@@ -13,10 +13,18 @@ interface Res {
   success: boolean
 }
 
+interface UseFetchOptions<Res> {}
+
 const bannerData = ref<Res | null>(null)
 const getBannerData = async () => {
-  const { data, pending, error, refresh } = await useFetch<Res>('/api/setting/banner')
-  bannerData.value = data.value
+  const { data, pending, error, refresh } = await useFetch('/api/auth/send-code', {
+    method: 'post',
+    body: {
+      account: 15622274882,
+      code_type: 2,
+    },
+  })
+  console.log(data.value?.data.code)
 }
 const out = () => {
   Cookie.remove('access_token')
