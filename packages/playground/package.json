@@ -4,13 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "nuxi dev",
-    "preview": "nuxi preview"
+    "preview": "nuxi preview",
+    "nuxt-prepare": "nuxt prepare"
   },
   "devDependencies": {
     "@spruce-hub/nuxt-fetch": "workspace:^1.0.0",
     "@spruce-hub/nuxt-route": "workspace:^1.0.0",
-    "nuxt": "^3.3.1",
-    "sass": "^1.60.0",
+    "nuxt": "^3.4.1",
+    "sass": "^1.62.0",
     "vue": "^3.2.47"
   },
   "browserslist": [

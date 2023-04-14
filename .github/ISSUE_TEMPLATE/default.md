@@ -1,6 +1,9 @@
-## 环境
+### Environment
 
 - [ ] @spruce-hub/nuxt-fetch
+
+  - version:
+
 - [ ] @spruce-hub/nuxt-route
 
   - version:
@@ -8,14 +11,17 @@
 - Vue Version:
 - Nuxt Version:
 - Browser/OS:
-- Build Tool:
+- Builder Tool:
+- Package Manager:
 
-## 问题
+### Reproduction
 
-### 线上案例
+### Describe the bug
 
-### 复现步骤
+### Expected result
 
-### 预期效果
+### Actual result
 
-### 实际效果
+### System Info
+
+### Any additional comments

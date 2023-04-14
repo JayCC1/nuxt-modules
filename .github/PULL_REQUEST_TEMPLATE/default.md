@@ -1,12 +1,22 @@
-## 基础条件
+### 🔗 Linked issue
 
-- [ ] 已遵守[开发指南](/CONTRIBUTING.md)
-- [ ] 已通过严格的单元测试
-- [ ] 该 PR 将合并到 `dev` 分支
-
-## 影响的范围
+### 📦 Package of change
 
 - [ ] fetch
 - [ ] route
 
-## 详细描述
+### ❓ Type of change
+
+- [ ] 📖 Documentation (updates to the documentation, readme or JSdoc annotations)
+- [ ] 🐞 Bug fix (a non-breaking change that fixes an issue)
+- [ ] 👌 Enhancement (improving an existing functionality like performance)
+- [ ] ✨ New feature (a non-breaking change that adds functionality)
+- [ ] 🧹 Chore (updates to the build process or auxiliary tools and libraries)
+- [ ] ⚠️ Breaking change (fix or feature that would cause existing functionality to change)
+
+### 📚 Description
+
+### 📝 Checklist
+
+- [ ] I have linked an issue or discussion.
+- [ ] I have updated the documentation accordingly.
