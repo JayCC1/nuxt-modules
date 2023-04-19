@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     nuxtFetch: {
       baseApi: '/api',
       serviceUrl: 'http://zfl.online.dev.fyunshan.com',
+      authorization: 'access_token',
     },
   },
 })
