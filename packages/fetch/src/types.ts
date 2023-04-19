@@ -19,10 +19,4 @@ export interface Options {
   authorization?: string
 }
 
-declare module '@nuxt/schema' {
-  interface RuntimeConfig {
-    nuxtFetch?: Options
-  }
-}
-
 export {}
