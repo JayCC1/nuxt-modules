@@ -2,8 +2,8 @@
 
 ### 📦 Package of change
 
-- [ ] fetch
-- [ ] route
+- [ ] @spruce-hub/nuxt-fetch
+- [ ] @spruce-hub/nuxt-route
 
 ### ❓ Type of change
 
