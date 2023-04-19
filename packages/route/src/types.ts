@@ -30,10 +30,4 @@ export interface Options {
   excludePath: string[]
 }
 
-declare module '@nuxt/schema' {
-  interface NuxtConfig {
-    nuxtRoute?: Options
-  }
-}
-
 export {}
