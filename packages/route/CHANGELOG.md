@@ -1,4 +1,15 @@
-# 1.0.0 (2023-03-28)
+## [1.0.1](https://github.com/spruce-hub/nuxt-modules/compare/v1.0.0...v1.0.1) (2023-04-20)
+
+### 🐛Bug Fixes
+
+- **route:** 不需要主动扩展 `@nuxt/schema` 模块 ([be4177e](https://github.com/spruce-hub/nuxt-modules/commit/be4177ec616fbdc49a740f06c5a4b1161f50ca49))
+
+### 🛠️Chore
+
+- update config ([a3cad1c](https://github.com/spruce-hub/nuxt-modules/commit/a3cad1c01be738b1ef50d2f29a3e4d46d6a81450))
+- update config ([a917da3](https://github.com/spruce-hub/nuxt-modules/commit/a917da36631bfa4f90ec688a0bfcc4c39773ebcd))
+
+# [1.0.0](https://github.com/spruce-hub/nuxt-modules/compare/e7c09ae3a09ae8c64476cdec35bedebb349581f1...v1.0.0) (2023-03-28)
 
 ### ✨Features
 

@@ -78,10 +78,10 @@ importers:
   packages/playground:
     devDependencies:
       '@spruce-hub/nuxt-fetch':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^1.0.1
         version: link:../fetch
       '@spruce-hub/nuxt-route':
-        specifier: workspace:^1.0.0
+        specifier: workspace:^1.0.1
         version: link:../route
       nuxt:
         specifier: ^3.4.1
