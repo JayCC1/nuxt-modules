@@ -22,7 +22,7 @@ export default defineEventHandler(async (event: H3Event) => {
     const headers = getRequestHeaders(event)
     const cookies = parseCookies(event)
     let body = null
-    headers['Authorization'] = nuxtFetch.authorization || cookies['access_token']
+    headers['Authorization'] = cookies[nuxtFetch.authorization || 'access_token']
     delete headers['host']
     if ('GET' !== method.toUpperCase()) {
       body = await readBody(event)
