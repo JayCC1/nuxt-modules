@@ -1,3 +1,9 @@
+## [1.0.2](https://github.com/spruce-hub/nuxt-modules/compare/v1.0.1...v1.0.2) (2023-04-24)
+
+### 🐛Bug Fixes
+
+- **fetch:** use `proxyRequest` instead of `$fetch` to resolve Internal Server Error ([#3](https://github.com/spruce-hub/nuxt-modules/issues/3)) ([eedb83a](https://github.com/spruce-hub/nuxt-modules/commit/eedb83a12fd06aa2a59fe0b04ea159a81da9d594))
+
 ## [1.0.1](https://github.com/spruce-hub/nuxt-modules/compare/v1.0.0...v1.0.1) (2023-04-20)
 
 ### 🐛Bug Fixes

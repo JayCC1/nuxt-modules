@@ -8,7 +8,7 @@
     "nuxt-prepare": "nuxt prepare"
   },
   "devDependencies": {
-    "@spruce-hub/nuxt-fetch": "workspace:^1.0.1",
+    "@spruce-hub/nuxt-fetch": "workspace:^1.0.2",
     "@spruce-hub/nuxt-route": "workspace:^1.0.1",
     "nuxt": "^3.4.1",
     "sass": "^1.62.0",
