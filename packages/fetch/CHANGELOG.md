@@ -1,4 +1,8 @@
-## [1.0.3](https://github.com/spruce-hub/nuxt-modules/compare/v1.0.1...v1.0.3) (2023-04-25)
+# [1.1.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.0.1...v1.1.0) (2023-04-25)
+
+### ✨Features
+
+- **fetch:** support retrieving API host from environment variables ([67c3a93](https://github.com/spruce-hub/nuxt-modules/commit/67c3a93df105a7444894eff662169a61fab82c59))
 
 ### 🐛Bug Fixes
 
