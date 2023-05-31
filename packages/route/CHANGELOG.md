@@ -1,3 +1,13 @@
+## [1.1.1](https://github.com/spruce-hub/nuxt-modules/compare/v1.1.0...v1.1.1) (2023-05-31)
+
+### 🐛Bug Fixes
+
+- **route:** 显式导出 nuxt 方法 ([9cb5bf5](https://github.com/spruce-hub/nuxt-modules/commit/9cb5bf521beb6629e704cd3502a78679e72fbc67))
+
+### 🛠️Chore
+
+- update config ([4f528bb](https://github.com/spruce-hub/nuxt-modules/commit/4f528bb6af72c55727dbdb25dd0b41a9db812248))
+
 ## [1.0.1](https://github.com/spruce-hub/nuxt-modules/compare/v1.0.0...v1.0.1) (2023-04-20)
 
 ### 🐛Bug Fixes
