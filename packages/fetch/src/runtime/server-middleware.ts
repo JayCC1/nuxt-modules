@@ -16,7 +16,7 @@ export default defineEventHandler(async (event: H3Event) => {
 
   if (event.node.req.url?.startsWith(nuxtFetch.baseApi)) {
     const url = `${apiHost}${event.node.req.url}`
-    const headers = {}
+    const headers: Record<string, string> = {}
 
     const cookies = parseCookies(event)
 
