@@ -24,7 +24,7 @@
     "changelog": "conventional-changelog -n '../../changelog.config.js' -i CHANGELOG.md -s -r 0 -k ./package.json --commit-path ./"
   },
   "keywords": [
-    "飞讯云杉前端",
+    "Spruce FE",
     "Spruce Hub",
     "Nuxt Modules"
   ],
@@ -43,13 +43,13 @@
     "access": "public"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.4.1",
-    "js-cookie": "^3.0.1",
-    "minimatch": "^9.0.0"
+    "@nuxt/kit": "^3.5.2",
+    "js-cookie": "^3.0.5",
+    "minimatch": "^9.0.1"
   },
   "devDependencies": {
-    "@nuxt/module-builder": "^0.3.0",
-    "@nuxt/schema": "^3.4.1",
+    "@nuxt/module-builder": "^0.4.0",
+    "@nuxt/schema": "^3.5.2",
     "@types/js-cookie": "^3.0.3"
   }
 }

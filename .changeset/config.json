@@ -4,7 +4,7 @@
   "access": "restricted",
   "baseBranch": "main",
   "ignore": ["playground"],
-  "fixed": [],
+  "fixed": [["@spruce-hub/nuxt-fetch", "@spruce-hub/nuxt-route"]],
   "linked": [],
   "updateInternalDependencies": "patch",
   "changelog": false
