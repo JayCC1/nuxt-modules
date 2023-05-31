@@ -1,4 +1,4 @@
-import { defineNuxtPlugin } from '#app'
+import { defineNuxtPlugin, addRouteMiddleware, navigateTo } from '#app'
 import options from '#build/spruce.module.route.options.mjs'
 
 import Cookie from 'js-cookie'
