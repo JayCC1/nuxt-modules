@@ -18,7 +18,7 @@
     "> 1%",
     "maintained node versions",
     "not dead",
-    "not ie",
+    "ie >11",
     "safari >=7"
   ]
 }
