@@ -2,7 +2,6 @@ import { defineNuxtPlugin, addRouteMiddleware, navigateTo } from '#app'
 import options from '#build/spruce.module.route.options.mjs'
 
 import Cookie from 'js-cookie'
-import anymatch from 'anymatch'
 
 /**
  * @param {string} interceptFullPath 被拦截的路由
@@ -16,12 +15,20 @@ let historyFullPath = ''
 
 /**
  * @function
- * @param {string} path 待验证路由
- * @param {string} pathGlob glob 匹配规则
- * @returns {string[]} 匹配成功时返回匹配的路由，否则返回空
+ * @param {string} to 待验证路由
+ * @param {string} authPath 待匹配路由
+ * @returns {string[]} 返回匹配成功的路由
  */
-const verifyPath = (path: string, pathGlob: string[]): string[] =>
-  pathGlob.filter((item) => (anymatch(path, item) ? path : ''))
+
+const verifyPath = (to: string, authPath: string[]): string[] => {
+  return authPath.filter((item) => {
+    if (item.endsWith('/')) {
+      return to === item
+    }
+    item = item.endsWith('/') ? item : `${item}/`
+    return to.startsWith(item)
+  })
+}
 
 export default defineNuxtPlugin(() => {
   /**
