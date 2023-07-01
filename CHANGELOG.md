@@ -1,3 +1,13 @@
+# [1.2.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.1.2...v1.2.0) (2023-07-01)
+
+### 🐛Bug Fixes
+
+- **route:** 修复在浏览器环境下无法匹配路由的错误 ([977adac](https://github.com/spruce-hub/nuxt-modules/commit/977adace30fa0f52d0b2f73d11d77dd14c4c8b71))
+
+### 🛠️Chore
+
+- update tsconfig ([46a577e](https://github.com/spruce-hub/nuxt-modules/commit/46a577ed2546fd2dd8a89551491b2bc4c04ba2fa))
+
 ## [1.1.2](https://github.com/spruce-hub/nuxt-modules/compare/v1.1.1...v1.1.2) (2023-07-01)
 
 ### 🐛Bug Fixes
