@@ -2,7 +2,7 @@ import { defineNuxtPlugin, addRouteMiddleware, navigateTo } from '#app'
 import options from '#build/spruce.module.route.options.mjs'
 
 import Cookie from 'js-cookie'
-import { minimatch } from 'minimatch'
+import anymatch from 'anymatch'
 
 /**
  * @param {string} interceptFullPath 被拦截的路由
@@ -21,7 +21,7 @@ let historyFullPath = ''
  * @returns {string[]} 匹配成功时返回匹配的路由，否则返回空
  */
 const verifyPath = (path: string, pathGlob: string[]): string[] =>
-  pathGlob.filter((item) => (minimatch(path, item) ? path : ''))
+  pathGlob.filter((item) => (anymatch(path, item) ? path : ''))
 
 export default defineNuxtPlugin(() => {
   /**
