@@ -1,6 +1,6 @@
 {
   "name": "@spruce-hub/nuxt-route",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Secure and easy route ability integration with Nuxt.js",
   "main": "./dist/module.cjs",
   "module": "./dist/module.mjs",
@@ -43,13 +43,12 @@
     "access": "public"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.5.2",
-    "js-cookie": "^3.0.5",
-    "minimatch": "^9.0.1"
+    "@nuxt/kit": "^3.6.1",
+    "js-cookie": "^3.0.5"
   },
   "devDependencies": {
     "@nuxt/module-builder": "^0.4.0",
-    "@nuxt/schema": "^3.5.2",
+    "@nuxt/schema": "^3.6.1",
     "@types/js-cookie": "^3.0.3"
   }
 }

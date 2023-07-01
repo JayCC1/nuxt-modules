@@ -1,3 +1,14 @@
+## [1.1.2](https://github.com/spruce-hub/nuxt-modules/compare/v1.1.1...v1.1.2) (2023-07-01)
+
+### 🐛Bug Fixes
+
+- **route:** 使用支持 ESM 模块的 anymatch 代替 minimatch ([9db764f](https://github.com/spruce-hub/nuxt-modules/commit/9db764ff80e42130a3be8b0875a12535ed67b26f))
+
+### 🛠️Chore
+
+- 设置浏览器规则 ([a6e3fd6](https://github.com/spruce-hub/nuxt-modules/commit/a6e3fd604a482523caeae4c61d33fba6c3e60eee))
+- update deps ([ced85fa](https://github.com/spruce-hub/nuxt-modules/commit/ced85fa6af8011fb9835bf9a0eee4dcdbf5c8cfc))
+
 ## [1.1.1](https://github.com/spruce-hub/nuxt-modules/compare/v1.1.0...v1.1.1) (2023-05-31)
 
 ### 🐛Bug Fixes

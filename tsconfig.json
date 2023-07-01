@@ -98,5 +98,5 @@
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
   "extends": "./packages/playground/.nuxt/tsconfig.json",
-  "include": ["packages/**/*.ts"]
+  "include": ["./packages/fetch/src/**/*.ts", "./packages/route/src/**/*.ts"]
 }

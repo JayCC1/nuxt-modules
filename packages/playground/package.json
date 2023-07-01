@@ -9,8 +9,8 @@
   "devDependencies": {
     "@spruce-hub/nuxt-fetch": "workspace:*",
     "@spruce-hub/nuxt-route": "workspace:*",
-    "nuxt": "^3.5.2",
-    "sass": "^1.62.1",
+    "nuxt": "^3.6.1",
+    "sass": "^1.63.6",
     "vue": "^3.3.4"
   },
   "browserslist": [
@@ -18,7 +18,7 @@
     "> 1%",
     "maintained node versions",
     "not dead",
-    "not ie",
+    "ie >11",
     "safari >=7"
   ]
 }
