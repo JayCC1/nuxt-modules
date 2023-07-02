@@ -19,15 +19,15 @@ export default defineNuxtModule<Options>({
     /** add route options template
      * -------------------------- */
     addTemplate({
-      filename: 'spruce.module.route.options.mjs',
+      filename: 'spruce-module-route.mjs',
       write: true,
       getContents: () => {
-        return `export default ${JSON.stringify(_options || {})}`
+        return `export default ${JSON.stringify(_options, null, 2)}`
       },
     })
 
     /** add route middleware
      * -------------------------- */
-    addPlugin(resolve('./runtime/plugin-authentication'))
+    addPlugin(resolve('./runtime/plugins/authentication'))
   },
 })
