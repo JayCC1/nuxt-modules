@@ -1,3 +1,17 @@
+# [1.3.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.2.0...v1.3.0) (2023-07-02)
+
+### ✨Features
+
+- **fetch:** 实现了多项代码、功能的优化 ([98fa9e8](https://github.com/spruce-hub/nuxt-modules/commit/98fa9e8487966bb9ffae8c900037f4a0081326f0))
+
+### 🔨Code Refactoring
+
+- **route:** 重构了多项定义 ([459d97b](https://github.com/spruce-hub/nuxt-modules/commit/459d97b41a2883b6895cfcd6be36ff06784f590e))
+
+### 🛠️Chore
+
+- update playground config ([92ab117](https://github.com/spruce-hub/nuxt-modules/commit/92ab11717689216b7f4ad5fdca18d1c0ca54cffd))
+
 # [1.2.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.1.2...v1.2.0) (2023-07-01)
 
 ### 🐛Bug Fixes

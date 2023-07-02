@@ -1,3 +1,9 @@
+# [1.3.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.2.0...v1.3.0) (2023-07-02)
+
+### ✨Features
+
+- **fetch:** 实现了多项代码、功能的优化 ([98fa9e8](https://github.com/spruce-hub/nuxt-modules/commit/98fa9e8487966bb9ffae8c900037f4a0081326f0))
+
 # [1.2.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.1.2...v1.2.0) (2023-07-01)
 
 ## [1.1.2](https://github.com/spruce-hub/nuxt-modules/compare/v1.1.1...v1.1.2) (2023-07-01)
