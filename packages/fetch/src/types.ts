@@ -1,28 +1,27 @@
 export interface Options {
   /**
-   * 路由前缀
-   * - Example: '/api'
+   * 走代理路线的路由前缀
    */
-  baseApi: string
+  apiBase: string
 
   /**
-   * 授权码
-   * - headers['Authorization']
-   * - Default: Cookies['access_token']
-   */
-  authorization?: string
-
-  /**
-   * 可选，最高优先级，从环境变量中获取目标服务地址
-   * @example { apiHostEnv: 'API_HOST' } // process.env.API_HOST
+   * 从环境变量获取目标服务器地址
    */
   apiHostEnv?: string
 
   /**
-   * 可选，当 process.env[apiHostEnv] 为 false，从 apiHostUrl 获取目标服务地址
-   * @example { apiHostUrl: 'http://myapi.com/' } // http://myapi.com/
+   * 目标服务器地址，若 `apiHostEnv` 存在则被忽略
    */
   apiHostUrl?: string
+
+  /**
+   * 授权码
+   *
+   * 根据所提供的 name，从 cookie 中获取 value 并写入到 headers['Authorization']
+   * - headers['Authorization']
+   * - Default: Cookies['access_token']
+   */
+  cookieName?: string
 }
 
 export {}

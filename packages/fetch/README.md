@@ -13,22 +13,24 @@ pnpm add @spruce-hub/nuxt-fetch -P
 ```ts
 // nuxt.config.ts
 export default defineNuxtConfig({
-  modules: ['@spruce-hub/nuxt-fetch'],
-  runtimeConfig: {
-    nuxtFetch: {
-      // 需要代理的路由前缀
-      baseApi: '/api',
+  modules: [
+    [
+      '@spruce-hub/nuxt-fetch',
+      {
+        // 走代理路线的路由前缀
+        apiBase: '/api',
 
-      // 从 cookie 中获取名为 access_token 的值并写入请求头 Authorization 中
-      authorization: 'access_token',
+        // 从环境变量获取目标服务器地址
+        apiHostEnv: 'API_HOST', // process.env.API_HOST
 
-      // 可选，最高优先级，从环境变量中获取目标服务地址
-      apiHostEnv: 'API_HOST', // process.env.API_HOST
+        // 目标服务器地址，若 `apiHostEnv` 存在则被忽略
+        apiHostUrl: 'http://zflcnapi.online.dev.fyunshan.com/',
 
-      // 可选，当 process.env[apiHostEnv] 为 false，从 apiHostUrl 获取目标服务地址
-      apiHostUrl: 'http://myapi.com/',
-    },
-  },
+        // 根据所提供的 name，从 cookie 中获取 value 并写入到 headers['Authorization']
+        cookieName: 'access_token',
+      },
+    ],
+  ],
 })
 ```
 

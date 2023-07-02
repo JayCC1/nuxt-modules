@@ -1,8 +1,8 @@
 import type { Options } from './types'
 
 export const defaults: Options = {
-  baseApi: '',
-  authorization: '',
+  apiBase: '',
   apiHostEnv: '',
   apiHostUrl: '',
+  cookieName: '',
 }

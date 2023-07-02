@@ -1,4 +1,4 @@
-import { defineNuxtModule, createResolver, addServerHandler } from '@nuxt/kit'
+import { defineNuxtModule, createResolver, addServerHandler, addTemplate } from '@nuxt/kit'
 
 import { defaults } from './config'
 
@@ -13,13 +13,28 @@ export default defineNuxtModule<Options>({
     },
   },
   defaults,
-  setup() {
+  setup(_options, nuxt) {
     const resolver = createResolver(import.meta.url)
+
+    /** add route options template
+     * -------------------------- */
+    nuxt.options.alias['#nuxtFetch'] =
+      addTemplate({
+        filename: 'spruce-module-fetch.mjs',
+        write: true,
+        getContents: () => `export default ${JSON.stringify(_options, null, 2)}`,
+      }).dst || ''
+
+    addTemplate({
+      filename: 'spruce-module-fetch.d.ts',
+      write: true,
+      getContents: () => `export default ${JSON.stringify(_options, null, 2)}`,
+    })
 
     /** add serverMiddleware
      * -------------------------- */
     addServerHandler({
-      handler: resolver.resolve('./runtime/server-middleware'),
+      handler: resolver.resolve('./runtime/server/proxy'),
     })
   },
 })
