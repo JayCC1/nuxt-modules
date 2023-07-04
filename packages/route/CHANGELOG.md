@@ -1,3 +1,9 @@
+## [1.3.1](https://github.com/spruce-hub/nuxt-modules/compare/v1.3.0...v1.3.1) (2023-07-04)
+
+### 🐛Bug Fixes
+
+- **route:** 修复路由匹配错误的问题 ([6aa4087](https://github.com/spruce-hub/nuxt-modules/commit/6aa4087adc1fb2a947fa342be9a97b8bba369c13))
+
 # [1.3.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.2.0...v1.3.0) (2023-07-02)
 
 ### 🔨Code Refactoring
