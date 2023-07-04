@@ -23,10 +23,9 @@ let historyFullPath = ''
 const verifyPath = (to: string, authPath: string[]): string[] => {
   return authPath.filter((item) => {
     if (item.endsWith('/')) {
-      return to === item
+      return to.startsWith(item)
     }
-    item = item.endsWith('/') ? item : `${item}/`
-    return to.startsWith(item)
+    return to === item
   })
 }
 

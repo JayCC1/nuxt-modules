@@ -37,6 +37,10 @@ export default defineNuxtConfig({
 })
 ```
 
+登录成功后通过 `$loginSuccess` 告诉 nuxt-route
+
+此时会把 token 写入 cookie 并重定向回上一页
+
 ```ts
 const { $loginSuccess } = useNuxtApp()
 const login = () => {
