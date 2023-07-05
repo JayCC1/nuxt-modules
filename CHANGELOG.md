@@ -1,3 +1,14 @@
+## [1.3.2](https://github.com/spruce-hub/nuxt-modules/compare/v1.3.1...v1.3.2) (2023-07-05)
+
+### 🐛Bug Fixes
+
+- **route:** 修复在服务端获取 cookie 失败的问题 ([e2ae5e1](https://github.com/spruce-hub/nuxt-modules/commit/e2ae5e1717f2607f76baecb1a0eabbfdf9eac15b))
+
+### 🛠️Chore
+
+- update playground ([ad5edc3](https://github.com/spruce-hub/nuxt-modules/commit/ad5edc330f5e88638b558b14ed37694511d7afe8))
+- update playground ([fbb5563](https://github.com/spruce-hub/nuxt-modules/commit/fbb5563e7e24d76e12c0d787394ea4e30d3a3707))
+
 ## [1.3.1](https://github.com/spruce-hub/nuxt-modules/compare/v1.3.0...v1.3.1) (2023-07-04)
 
 ### 🐛Bug Fixes
