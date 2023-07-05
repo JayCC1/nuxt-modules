@@ -1,5 +1,3 @@
-import Cookie from 'js-cookie'
-
 export const useAuth = () => {
   const { $loginSuccess } = useNuxtApp()
   const token = useState('token', () => useCookie('access_token').value || '')
@@ -10,7 +8,7 @@ export const useAuth = () => {
   }
 
   function logout() {
-    Cookie.remove('access_token')
+    useCookie('access_token').value = ''
     token.value = ''
   }
 
