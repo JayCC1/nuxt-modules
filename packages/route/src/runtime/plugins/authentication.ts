@@ -1,7 +1,5 @@
-import { defineNuxtPlugin, addRouteMiddleware, navigateTo } from '#app'
+import { defineNuxtPlugin, addRouteMiddleware, navigateTo, useCookie } from '#app'
 import nuxtRoute from '#build/spruce-module-route.mjs'
-
-import Cookie from 'js-cookie'
 
 /**
  * @param {string} interceptFullPath 被拦截的路由
@@ -50,7 +48,7 @@ export default defineNuxtPlugin(() => {
        *
        * 满足以上条件则跳转到登录页面
        * -------------------------- */
-      if (!Cookie.get(nuxtRoute.cookieName) && verifyPath(to.path, nuxtRoute.authPath).length > 0) {
+      if (!useCookie('access_token').value && verifyPath(to.path, nuxtRoute.authPath).length > 0) {
         interceptFullPath = to.fullPath
         return navigateTo(nuxtRoute.loginPath)
       }
@@ -67,7 +65,7 @@ export default defineNuxtPlugin(() => {
 
     toFullPath = verifyPath(toFullPath, nuxtRoute.excludePath).length > 0 ? '/' : toFullPath
 
-    Cookie.set(nuxtRoute.cookieName, token)
+    useCookie(nuxtRoute.cookieName).value = token
 
     return navigateTo(toFullPath)
   }
