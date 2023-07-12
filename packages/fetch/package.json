@@ -1,6 +1,6 @@
 {
   "name": "@spruce-hub/nuxt-fetch",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "Secure and easy http proxy integration with Nuxt.js",
   "main": "./dist/module.cjs",
   "module": "./dist/module.mjs",
@@ -43,10 +43,10 @@
     "access": "public"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.6.1"
+    "@nuxt/kit": "^3.6.2"
   },
   "devDependencies": {
     "@nuxt/module-builder": "^0.4.0",
-    "@nuxt/schema": "^3.6.1"
+    "@nuxt/schema": "^3.6.2"
   }
 }

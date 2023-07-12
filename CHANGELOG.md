@@ -1,3 +1,9 @@
+## [1.3.3](https://github.com/spruce-hub/nuxt-modules/compare/v1.3.2...v1.3.3) (2023-07-12)
+
+### 🐛Bug Fixes
+
+- **route:** 待验证路由以 `/` 结尾时，尽管不是子路由也应该判断为 `true` ([8f04c5c](https://github.com/spruce-hub/nuxt-modules/commit/8f04c5cb470bb3abb91eab48165e18006ff7d319))
+
 ## [1.3.2](https://github.com/spruce-hub/nuxt-modules/compare/v1.3.1...v1.3.2) (2023-07-05)
 
 ### 🐛Bug Fixes
