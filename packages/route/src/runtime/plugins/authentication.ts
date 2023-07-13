@@ -1,4 +1,4 @@
-import { defineNuxtPlugin, addRouteMiddleware, navigateTo, useCookie } from '#app'
+import { defineNuxtPlugin, addRouteMiddleware, navigateTo, useCookie, CookieOptions } from '#app'
 import nuxtRoute from '#build/spruce-module-route.mjs'
 
 /**
@@ -53,19 +53,19 @@ export default defineNuxtPlugin(() => {
         return navigateTo(nuxtRoute.loginPath)
       }
     },
-    { global: true }
+    { global: true },
   )
 
   /**
    * @function
    * @param {string} token 用户token
    */
-  const loginSuccess = (token: string) => {
+  const loginSuccess = (token: string, options?: CookieOptions) => {
     let toFullPath = interceptFullPath || historyFullPath
 
     toFullPath = verifyPath(toFullPath, nuxtRoute.excludePath).length > 0 ? '/' : toFullPath
 
-    useCookie(nuxtRoute.cookieName).value = token
+    useCookie(nuxtRoute.cookieName, options).value = token
 
     return navigateTo(toFullPath)
   }
