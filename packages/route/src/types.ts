@@ -28,4 +28,11 @@ export interface Options {
   excludePath: string[]
 }
 
-export {}
+declare module '@nuxt/schema' {
+  interface NuxtConfig {
+    nuxtRoute?: Partial<Options>
+  }
+  interface NuxtOptions {
+    nuxtRoute?: Partial<Options>
+  }
+}

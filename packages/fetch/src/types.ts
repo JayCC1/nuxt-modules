@@ -24,4 +24,11 @@ export interface Options {
   cookieName?: string
 }
 
-export {}
+declare module '@nuxt/schema' {
+  interface NuxtConfig {
+    nuxtFetch?: Partial<Options>
+  }
+  interface NuxtOptions {
+    nuxtFetch?: Partial<Options>
+  }
+}
