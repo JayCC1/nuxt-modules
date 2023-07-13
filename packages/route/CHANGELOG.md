@@ -1,3 +1,9 @@
+## [1.4.1](https://github.com/spruce-hub/nuxt-modules/compare/v1.4.0...v1.4.1) (2023-07-13)
+
+### 🐛Bug Fixes
+
+- **route:** 当路由拦截发生在服务端时，客户端从 cookie 中获取目标路由 ([addbb09](https://github.com/spruce-hub/nuxt-modules/commit/addbb09ac0fafb8737300bcd63672628942326af))
+
 # [1.4.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.3.3...v1.4.0) (2023-07-13)
 
 ### ✨Features
