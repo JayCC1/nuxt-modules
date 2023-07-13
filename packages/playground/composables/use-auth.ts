@@ -4,7 +4,7 @@ export const useAuth = () => {
 
   function login(t: string) {
     token.value = t
-    $loginSuccess(t)
+    $loginSuccess(t, { maxAge: 3600 })
   }
 
   function logout() {

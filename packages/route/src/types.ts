@@ -36,3 +36,5 @@ declare module '@nuxt/schema' {
     nuxtRoute?: Partial<Options>
   }
 }
+
+export {}

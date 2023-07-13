@@ -46,9 +46,14 @@ const { $loginSuccess } = useNuxtApp()
 const login = () => {
   let token = ''
 
+  // options 为 useCookie 的第二个参数，用于设置 cookie 的其他属性
+  const options = {
+    maxAge: 3600,
+  }
+
   // ···
 
-  $loginSuccess(token)
+  $loginSuccess(token, options)
 }
 ```
 

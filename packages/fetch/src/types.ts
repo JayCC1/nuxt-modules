@@ -32,3 +32,5 @@ declare module '@nuxt/schema' {
     nuxtFetch?: Partial<Options>
   }
 }
+
+export {}
