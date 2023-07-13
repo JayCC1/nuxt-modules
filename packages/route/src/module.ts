@@ -42,17 +42,17 @@ export default defineNuxtModule<Options>({
 import type { CookieOptions } from '#app'
 declare module '#app' {
   interface NuxtApp {
-    $loginSuccess(token: string, options: CookieOptions): void
+    $loginSuccess(token: string, options?: CookieOptions): void
   }
 }
 declare module 'vue' {
   interface ComponentCustomProperties {
-    $loginSuccess(token: string, options: CookieOptions): void
+    $loginSuccess(token: string, options?: CookieOptions): void
   }
 }
 declare module "@vue/runtime-core" {
   interface ComponentCustomProperties {
-    $loginSuccess(token: string, options: CookieOptions): void
+    $loginSuccess(token: string, options?: CookieOptions): void
   }
 }
 export {}`,

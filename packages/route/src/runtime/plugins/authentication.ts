@@ -1,15 +1,7 @@
-import { defineNuxtPlugin, addRouteMiddleware, navigateTo, useCookie, CookieOptions } from '#app'
+import { defineNuxtPlugin, addRouteMiddleware, navigateTo, useCookie } from '#app'
 import nuxtRoute from '#build/spruce-module-route.mjs'
 
-/**
- * @param {string} interceptFullPath 被拦截的路由
- */
-let interceptFullPath = ''
-
-/**
- * @param {string} historyFullPath 上一个路由
- */
-let historyFullPath = ''
+import type { CookieOptions } from '#app'
 
 /**
  * @function
@@ -33,14 +25,7 @@ export default defineNuxtPlugin(() => {
    * -------------------------- */
   addRouteMiddleware(
     'authentication-middleware-global',
-    (to, from) => {
-      historyFullPath = from.path
-
-      // 重定向到登录页时，仍保留拦截的路由
-      if (!(to.path === nuxtRoute.loginPath)) {
-        interceptFullPath = ''
-      }
-
+    (to) => {
       /**
        * 拦截条件
        * - cookie 中不存在 token
@@ -49,7 +34,8 @@ export default defineNuxtPlugin(() => {
        * 满足以上条件则跳转到登录页面
        * -------------------------- */
       if (!useCookie('access_token').value && verifyPath(to.path, nuxtRoute.authPath).length > 0) {
-        interceptFullPath = to.fullPath
+        useCookie('next_path').value = to.path
+
         return navigateTo(nuxtRoute.loginPath)
       }
     },
@@ -59,13 +45,17 @@ export default defineNuxtPlugin(() => {
   /**
    * @function
    * @param {string} token 用户token
+   * @param {CookieOptions} options useCookie 的 options
    */
   const loginSuccess = (token: string, options?: CookieOptions) => {
-    let toFullPath = interceptFullPath || historyFullPath
+    const cookieName = useCookie(nuxtRoute.cookieName, options)
+    const nextPath = useCookie<string>('next_path', { maxAge: 10 })
+    let toFullPath = nextPath.value
 
     toFullPath = verifyPath(toFullPath, nuxtRoute.excludePath).length > 0 ? '/' : toFullPath
 
-    useCookie(nuxtRoute.cookieName, options).value = token
+    cookieName.value = token
+    nextPath.value = ''
 
     return navigateTo(toFullPath)
   }
