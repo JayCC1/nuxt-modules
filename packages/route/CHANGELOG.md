@@ -1,3 +1,18 @@
+# [1.4.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.3.3...v1.4.0) (2023-07-13)
+
+### ✨Features
+
+- **route:** 添加 `$loginSuccess` 的类型声明 ([e50757d](https://github.com/spruce-hub/nuxt-modules/commit/e50757d60d1d73555dbfd15ae67975f897f86551))
+- **route:** `$loginSuccess` 可通过 useCookie 设置 cookie 的其他属性 ([9cb4701](https://github.com/spruce-hub/nuxt-modules/commit/9cb4701757d8e4ad242dc65b72e3d702da7e7d30))
+
+### 🐛Bug Fixes
+
+- 需要导出配置类型 ([87fa161](https://github.com/spruce-hub/nuxt-modules/commit/87fa161949e1afff8f75d216363bebf1ed6c6ec4))
+
+### 🛠️Chore
+
+- 增强类型、文档、演示 ([75e3d7f](https://github.com/spruce-hub/nuxt-modules/commit/75e3d7f9a8461cde3423141f0d00b0a24743c5cc))
+
 ## [1.3.3](https://github.com/spruce-hub/nuxt-modules/compare/v1.3.2...v1.3.3) (2023-07-12)
 
 ### 🐛Bug Fixes
