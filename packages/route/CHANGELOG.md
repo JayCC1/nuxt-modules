@@ -1,3 +1,9 @@
+# [1.5.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.4.1...v1.5.0) (2023-07-16)
+
+### ✨Features
+
+- **route:** 增强 Helper ([ca3c508](https://github.com/spruce-hub/nuxt-modules/commit/ca3c508ce273b228213cab305cb6b9b155f97a78))
+
 ## [1.4.1](https://github.com/spruce-hub/nuxt-modules/compare/v1.4.0...v1.4.1) (2023-07-13)
 
 ### 🐛Bug Fixes

@@ -1,6 +1,6 @@
 {
   "name": "@spruce-hub/nuxt-route",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "Secure and easy route ability integration with Nuxt.js",
   "main": "./dist/module.cjs",
   "module": "./dist/module.mjs",

@@ -1,3 +1,5 @@
+# [1.5.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.4.1...v1.5.0) (2023-07-16)
+
 ## [1.4.1](https://github.com/spruce-hub/nuxt-modules/compare/v1.4.0...v1.4.1) (2023-07-13)
 
 # [1.4.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.3.3...v1.4.0) (2023-07-13)
