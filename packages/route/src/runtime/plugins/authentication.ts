@@ -4,18 +4,19 @@ import nuxtRoute from '#build/spruce-module-route.mjs'
 import type { CookieOptions } from '#app'
 
 /**
- * @function
+ * @Describe 校验路由是否匹配
  * @param {string} to 待验证路由
  * @param {string} authPath 待匹配路由
  * @returns {string[]} 返回匹配成功的路由
  */
 
 const verifyPath = (to: string, authPath: string[]): string[] => {
+  const path = to.split('?')[0]
   return authPath.filter((item) => {
     if (item.endsWith('/')) {
-      return `${to}/`.startsWith(item)
+      return `${path}/`.startsWith(item)
     }
-    return to === item
+    return path === item
   })
 }
 
@@ -34,7 +35,7 @@ export default defineNuxtPlugin(() => {
        * 满足以上条件则跳转到登录页面
        * -------------------------- */
       if (!useCookie('access_token').value && verifyPath(to.path, nuxtRoute.authPath).length > 0) {
-        useCookie('next_path').value = to.path
+        useCookie('next_path').value = to.fullPath
 
         return navigateTo(nuxtRoute.loginPath)
       }
@@ -43,25 +44,49 @@ export default defineNuxtPlugin(() => {
   )
 
   /**
-   * @function
-   * @param {string} token 用户token
-   * @param {CookieOptions} options useCookie 的 options
+   * @Describe 记录一个路由地址并跳转到登录页
+   * @param {string} fullPath 记录的路由地址
    */
-  const loginSuccess = (token: string, options?: CookieOptions) => {
-    const cookieName = useCookie(nuxtRoute.cookieName, options)
+  function toLogin(fullPath: string) {
+    const nextPath = useCookie<string>('next_path')
+    nextPath.value = fullPath
+
+    return navigateTo(nuxtRoute.loginPath)
+  }
+
+  /**
+   * @Describe 登录成功后调用
+   * @param {string} token 将要写入 cookie 的值， name 为 `nuxtRoute.cookieName`
+   * @param {CookieOptions | string} options 当为 object 类型时，作为 useCookie 的 options；当为 string 类型时，作为重定向路由地址
+   * @param {string} to 重定向路由地址，该项具有最高优先级
+   */
+  function loginSuccess(token: string): void
+  function loginSuccess(token: string, to: string): void
+  function loginSuccess(token: string, options: CookieOptions, to?: string): void
+  function loginSuccess(token: string, options?: CookieOptions | string, to?: string) {
     const nextPath = useCookie<string>('next_path', { maxAge: 10 })
-    let toFullPath = nextPath.value
+    let toPath = nextPath.value || ''
 
-    toFullPath = verifyPath(toFullPath, nuxtRoute.excludePath).length > 0 ? '/' : toFullPath
+    if (typeof options === 'object') {
+      const tokenCookie = useCookie(nuxtRoute.cookieName, options)
+      tokenCookie.value = token
 
-    cookieName.value = token
-    nextPath.value = ''
+      toPath = verifyPath(to || toPath, nuxtRoute.excludePath).length > 0 ? '/' : toPath
+      nextPath.value = ''
+    } else if (typeof options === 'string') {
+      const tokenCookie = useCookie(nuxtRoute.cookieName)
+      tokenCookie.value = token
 
-    return navigateTo(toFullPath)
+      console.log(verifyPath('', nuxtRoute.excludePath))
+      toPath = verifyPath(to || options, nuxtRoute.excludePath).length > 0 ? '/' : options
+    }
+
+    return navigateTo(toPath)
   }
 
   return {
     provide: {
+      toLogin,
       loginSuccess,
     },
   }
