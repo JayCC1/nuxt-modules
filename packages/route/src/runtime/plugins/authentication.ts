@@ -64,23 +64,21 @@ export default defineNuxtPlugin(() => {
   function loginSuccess(token: string, to: string): void
   function loginSuccess(token: string, options: CookieOptions, to?: string): void
   function loginSuccess(token: string, options?: CookieOptions | string, to?: string) {
+    useCookie(nuxtRoute.cookieName).value = token
+
     const nextPath = useCookie<string>('next_path', { maxAge: 10 })
-    let toPath = nextPath.value || ''
+    let toPath = to || nextPath.value || '/'
 
     if (typeof options === 'object') {
-      const tokenCookie = useCookie(nuxtRoute.cookieName, options)
-      tokenCookie.value = token
-
-      toPath = verifyPath(to || toPath, nuxtRoute.excludePath).length > 0 ? '/' : toPath
-      nextPath.value = ''
+      useCookie(nuxtRoute.cookieName, options).value = token
+      toPath = to || toPath
     } else if (typeof options === 'string') {
-      const tokenCookie = useCookie(nuxtRoute.cookieName)
-      tokenCookie.value = token
-
-      console.log(verifyPath('', nuxtRoute.excludePath))
-      toPath = verifyPath(to || options, nuxtRoute.excludePath).length > 0 ? '/' : options
+      toPath = to || options
     }
 
+    toPath = verifyPath(toPath, nuxtRoute.excludePath).length > 0 ? '/' : toPath
+
+    nextPath.value = ''
     return navigateTo(toPath)
   }
 
