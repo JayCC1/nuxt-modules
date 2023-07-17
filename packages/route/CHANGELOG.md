@@ -1,3 +1,13 @@
+## [1.5.1](https://github.com/spruce-hub/nuxt-modules/compare/v1.5.0...v1.5.1) (2023-07-17)
+
+### 🐛Bug Fixes
+
+- **route:** 当 `$loginSuccess` 只有一个参数 `token` 时，也能正常重定向 ([c65c79c](https://github.com/spruce-hub/nuxt-modules/commit/c65c79c2f2e53469fc054aacadfd4be3e51c9681))
+
+### 🛠️Chore
+
+- update deps ([cac485a](https://github.com/spruce-hub/nuxt-modules/commit/cac485a13dfe63bc88ff3addc4c2221e82110915))
+
 # [1.5.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.4.1...v1.5.0) (2023-07-16)
 
 ### ✨Features
