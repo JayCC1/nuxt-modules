@@ -8,10 +8,22 @@ export default defineNuxtConfig({
     [
       '@spruce-hub/nuxt-fetch',
       {
-        apiBase: '/api',
-        apiHostEnv: 'API_HOST',
-        apiHostUrl: 'http://zflcnapi.online.dev.fyunshan.com',
-        cookieName: 'access_token',
+        '/api': {
+          pathRewrite: {
+            '^/api': 'api',
+          },
+          apiHostEnv: 'API_HOST',
+          apiHostUrl: 'http://zflcnapi.online.dev.fyunshan.com',
+          cookieName: 'access_token',
+        },
+        '/hm': {
+          pathRewrite: {
+            '^/hm': '/hmapi',
+          },
+          apiHostEnv: 'API_HOST',
+          apiHostUrl: 'http://zflcnapi.online.dev.fyunshan.com',
+          cookieName: 'access_token',
+        },
       },
     ],
     [

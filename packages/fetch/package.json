@@ -43,10 +43,10 @@
     "access": "public"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.6.3"
+    "@nuxt/kit": "^3.6.5"
   },
   "devDependencies": {
     "@nuxt/module-builder": "^0.4.0",
-    "@nuxt/schema": "^3.6.3"
+    "@nuxt/schema": "^3.6.5"
   }
 }
