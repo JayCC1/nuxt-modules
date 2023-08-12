@@ -17,17 +17,22 @@ export default defineNuxtConfig({
     [
       '@spruce-hub/nuxt-fetch',
       {
-        // 走代理路线的路由前缀
-        apiBase: '/api',
-
-        // 从环境变量获取目标服务器地址
-        apiHostEnv: 'API_HOST', // process.env.API_HOST
-
-        // 目标服务器地址，若 `apiHostEnv` 存在则被忽略
-        apiHostUrl: 'http://zflcnapi.online.dev.fyunshan.com/',
-
-        // 根据所提供的 name，从 cookie 中获取 value 并写入到 headers['Authorization']
-        cookieName: 'access_token',
+        '/api': {
+          pathRewrite: {
+            '^/api': 'api',
+          },
+          apiHostEnv: 'API_HOST',
+          apiHostUrl: 'http://api.com',
+          cookieName: 'access_token',
+        },
+        '/api2': {
+          pathRewrite: {
+            '^/api2': '/api',
+          },
+          apiHostEnv: 'API_HOST',
+          apiHostUrl: 'http://api2.com',
+          cookieName: 'access_token',
+        },
       },
     ],
   ],
