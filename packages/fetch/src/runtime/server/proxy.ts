@@ -1,20 +1,37 @@
 import { defineEventHandler, parseCookies, proxyRequest } from 'h3'
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import nuxtFetch from '#nuxtFetch'
 
 import type { H3Event } from 'h3'
 
+const nuxtFetchKey = Object.keys(nuxtFetch)
+
 export default defineEventHandler(async (event: H3Event) => {
-  /**
-   * feat: Support retrieving API host from environment variables
-   * -------------------------- */
-  let apiHost =
-    process.env[nuxtFetch.apiHostEnv] || nuxtFetch.apiHostUrl || event.node.req.headers.host || ''
+  const apiBase = `/${event.node.req.url?.split('/')[1]}`
 
-  apiHost = apiHost.endsWith('/') ? apiHost.slice(0, -1) : apiHost
+  if (nuxtFetchKey.includes(apiBase)) {
+    const options = nuxtFetch[apiBase]
+    let apiHost =
+      process.env[options.apiHostEnv] || options.apiHostUrl || event.node.req.headers.host || ''
 
-  if (event.node.req.url?.startsWith(nuxtFetch.apiBase)) {
-    const url = `${apiHost}${event.node.req.url}`
+    apiHost = apiHost.endsWith('/') ? apiHost.slice(0, -1) : apiHost
+
+    let path = event.node.req.url
+
+    if (options.pathRewrite && Object.keys(options.pathRewrite).length > 0) {
+      const key = Object.keys(options.pathRewrite)[0]
+      const regex = new RegExp(key)
+
+      const apiBase = options.pathRewrite[key].startsWith('/')
+        ? options.pathRewrite[key]
+        : `/${options.pathRewrite[key]}`
+
+      path = event.node.req.url?.replace(regex, apiBase)
+    }
+
+    const url = `${apiHost}${path}`
     const headers: Record<string, string> = {}
 
     const cookies = parseCookies(event)
@@ -23,8 +40,7 @@ export default defineEventHandler(async (event: H3Event) => {
      * fix: resolve Internal Server Error (#3)
      * note: Authorization should always be of string type
      * -------------------------- */
-    headers['Authorization'] = cookies[nuxtFetch.cookieName || 'access_token'] || 'none'
-
-    return proxyRequest(event, url, { headers })
+    headers['Authorization'] = cookies[options.cookieName || 'access_token'] || 'none'
+    return proxyRequest(event, url)
   }
 })

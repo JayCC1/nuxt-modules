@@ -1,8 +1,8 @@
 export interface Options {
   /**
-   * 走代理路线的路由前缀
+   * 改写请求路径前缀
    */
-  apiBase: string
+  pathRewrite?: Record<string, string>
 
   /**
    * 从环境变量获取目标服务器地址
@@ -26,10 +26,10 @@ export interface Options {
 
 declare module '@nuxt/schema' {
   interface NuxtConfig {
-    nuxtFetch?: Partial<Options>
+    nuxtFetch?: Record<string, Partial<Options>>
   }
   interface NuxtOptions {
-    nuxtFetch?: Partial<Options>
+    nuxtFetch?: Record<string, Partial<Options>>
   }
 }
 

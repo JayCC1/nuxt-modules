@@ -4,7 +4,7 @@ import { defaults } from './config'
 
 import type { Options } from './types'
 
-export default defineNuxtModule<Options>({
+export default defineNuxtModule<Record<string, Partial<Options>>>({
   meta: {
     name: '@spruce-hub/nuxt-fetch',
     configKey: 'nuxtFetch',
@@ -24,12 +24,6 @@ export default defineNuxtModule<Options>({
         write: true,
         getContents: () => `export default ${JSON.stringify(_options, null, 2)}`,
       }).dst || ''
-
-    addTemplate({
-      filename: 'spruce-module-fetch.d.ts',
-      write: true,
-      getContents: () => `export default ${JSON.stringify(_options, null, 2)}`,
-    })
 
     /** add serverMiddleware
      * -------------------------- */

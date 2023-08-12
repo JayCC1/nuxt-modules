@@ -1,8 +1,9 @@
 import type { Options } from './types'
 
-export const defaults: Options = {
-  apiBase: '',
-  apiHostEnv: '',
-  apiHostUrl: '',
-  cookieName: '',
+export const defaults: Record<string, Partial<Options>> = {
+  '/api': {
+    apiHostEnv: '',
+    apiHostUrl: '',
+    cookieName: '',
+  },
 }
