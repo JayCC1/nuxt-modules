@@ -1,3 +1,13 @@
+# [1.6.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.5.1...v1.6.0) (2023-08-12)
+
+### ✨Features
+
+- **fetch:** 支持多个代理 ([bb5e4cf](https://github.com/spruce-hub/nuxt-modules/commit/bb5e4cfdedb3e0245ec4021aa2115d3c2b2cf0dc))
+
+### 🛠️Chore
+
+- update config ([9e14bad](https://github.com/spruce-hub/nuxt-modules/commit/9e14bade9fcf1d9a4cd5d259da238b8a063bf94a))
+
 ## [1.5.1](https://github.com/spruce-hub/nuxt-modules/compare/v1.5.0...v1.5.1) (2023-07-17)
 
 ### 🛠️Chore
