@@ -1,3 +1,13 @@
+## [1.6.1](https://github.com/spruce-hub/nuxt-modules/compare/v1.6.0...v1.6.1) (2023-08-12)
+
+### 🐛Bug Fixes
+
+- **fetch:** 删除默认配置 ([1895873](https://github.com/spruce-hub/nuxt-modules/commit/1895873802dd19a4ce92da1b6c357bd114299812))
+
+### 🛠️Chore
+
+- update config ([b6947b0](https://github.com/spruce-hub/nuxt-modules/commit/b6947b095b9958bb20e718e9e9ac9811d04e0945))
+
 # [1.6.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.5.1...v1.6.0) (2023-08-12)
 
 ### ✨Features
