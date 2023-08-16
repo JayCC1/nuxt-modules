@@ -34,7 +34,10 @@ export default defineNuxtPlugin(() => {
        *
        * 满足以上条件则跳转到登录页面
        * -------------------------- */
-      if (!useCookie('access_token').value && verifyPath(to.path, nuxtRoute.authPath).length > 0) {
+      if (
+        !useCookie(`${nuxtRoute.cookieName}` || 'access_token').value &&
+        verifyPath(to.path, nuxtRoute.authPath).length > 0
+      ) {
         useCookie('next_path').value = to.fullPath
 
         return navigateTo(nuxtRoute.loginPath)
