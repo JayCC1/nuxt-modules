@@ -16,7 +16,7 @@ export default defineNuxtModule<Record<string, Partial<Options>>>({
   setup(_options, nuxt) {
     const resolver = createResolver(import.meta.url)
 
-    /** add route options template
+    /** add fetch options template
      * -------------------------- */
     nuxt.options.alias['#nuxtFetch'] =
       addTemplate({
