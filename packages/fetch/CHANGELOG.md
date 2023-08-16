@@ -1,3 +1,9 @@
+# [1.7.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.6.1...v1.7.0) (2023-08-16)
+
+### 🐛Bug Fixes
+
+- **fetch:** 更新代码注释 ([6743921](https://github.com/spruce-hub/nuxt-modules/commit/6743921168f9ed7750dfa327a8a37f44108a6127))
+
 ## [1.6.1](https://github.com/spruce-hub/nuxt-modules/compare/v1.6.0...v1.6.1) (2023-08-12)
 
 ### 🐛Bug Fixes

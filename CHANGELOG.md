@@ -1,3 +1,14 @@
+# [1.7.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.6.1...v1.7.0) (2023-08-16)
+
+### ✨Features
+
+- **route:** 登录状态阻止访问 `excludePath` 内的路由 ([055bc2b](https://github.com/spruce-hub/nuxt-modules/commit/055bc2b076205c26ff44c5da4dfeec51d8b2d28d))
+
+### 🐛Bug Fixes
+
+- **fetch:** 更新代码注释 ([6743921](https://github.com/spruce-hub/nuxt-modules/commit/6743921168f9ed7750dfa327a8a37f44108a6127))
+- **route:** 从 `nuxtRoute.cookieName` 中读取 cookie 的值 ([6f32eab](https://github.com/spruce-hub/nuxt-modules/commit/6f32eab93631840ae67b5b7240e55f84b9bd20aa))
+
 ## [1.6.1](https://github.com/spruce-hub/nuxt-modules/compare/v1.6.0...v1.6.1) (2023-08-12)
 
 ### 🐛Bug Fixes
