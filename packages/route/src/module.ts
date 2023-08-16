@@ -19,18 +19,17 @@ export default defineNuxtModule<Options>({
     },
   },
   defaults,
-  setup(_options) {
+  setup(_options, nuxt) {
     const { resolve } = createResolver(import.meta.url)
-
     /** add route options template
      * -------------------------- */
-    addTemplate({
-      filename: 'spruce-module-route.mjs',
-      write: true,
-      getContents: () => {
-        return `export default ${JSON.stringify(_options, null, 2)}`
-      },
-    })
+    _options.cookieName = _options.cookieName || 'access_token'
+    nuxt.options.alias['#nuxtRoute'] =
+      addTemplate({
+        filename: 'spruce-module-route.mjs',
+        write: true,
+        getContents: () => `export default ${JSON.stringify(_options, null, 2)}`,
+      }).dst || ''
 
     /** add route middleware
      * -------------------------- */

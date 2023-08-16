@@ -18,12 +18,12 @@ export interface Options {
    * 如果 value 存在，则认为当前为登录状态
    * - Default: 'access_token'
    */
-  cookieName?: string
+  cookieName?: string | undefined | null
 
   /**
-   * 登录成功之后默认重定向到上一级路由，但存在不合理的回跳情况
+   * 登录状态不允许访问的路由
    *
-   * 例如：当上一级页面是 “注册” 页面或首次访问的就是 “登录” 页面时，此时直接重定向到首页会更合适
+   * 例如：登录、注册页面，已登录状态访问这些页面将重定向到首页
    */
   excludePath: string[]
 }

@@ -1,5 +1,8 @@
 import { defineNuxtPlugin, addRouteMiddleware, navigateTo, useCookie } from '#app'
-import nuxtRoute from '#build/spruce-module-route.mjs'
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import nuxtRoute from '#nuxtRoute'
 
 import type { CookieOptions } from '#app'
 
@@ -35,12 +38,20 @@ export default defineNuxtPlugin(() => {
        * 满足以上条件则跳转到登录页面
        * -------------------------- */
       if (
-        !useCookie(`${nuxtRoute.cookieName}` || 'access_token').value &&
+        !useCookie(`${nuxtRoute.cookieName}`).value &&
         verifyPath(to.path, nuxtRoute.authPath).length > 0
       ) {
         useCookie('next_path').value = to.fullPath
 
         return navigateTo(nuxtRoute.loginPath)
+      }
+
+      /** 登录状态不可访问 excludePath 中定义的路由 */
+      if (
+        useCookie(`${nuxtRoute.cookieName}`).value &&
+        verifyPath(to.path, nuxtRoute.excludePath).length > 0
+      ) {
+        return navigateTo('/')
       }
     },
     { global: true },
@@ -67,13 +78,13 @@ export default defineNuxtPlugin(() => {
   function loginSuccess(token: string, to: string): void
   function loginSuccess(token: string, options: CookieOptions, to?: string): void
   function loginSuccess(token: string, options?: CookieOptions | string, to?: string) {
-    useCookie(nuxtRoute.cookieName).value = token
+    useCookie(`${nuxtRoute.cookieName}`).value = token
 
     const nextPath = useCookie<string>('next_path', { maxAge: 10 })
     let toPath = to || nextPath.value || '/'
 
     if (typeof options === 'object') {
-      useCookie(nuxtRoute.cookieName, options).value = token
+      useCookie(`${nuxtRoute.cookieName}`, options).value = token
       toPath = to || toPath
     } else if (typeof options === 'string') {
       toPath = to || options
