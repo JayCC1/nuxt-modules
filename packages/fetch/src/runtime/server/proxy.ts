@@ -41,6 +41,6 @@ export default defineEventHandler(async (event: H3Event) => {
      * note: Authorization should always be of string type
      * -------------------------- */
     headers['Authorization'] = cookies[options.cookieName || 'access_token'] || 'none'
-    return proxyRequest(event, url)
+    return proxyRequest(event, url, { headers })
   }
 })
