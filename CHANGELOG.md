@@ -1,3 +1,13 @@
+## [1.7.1](https://github.com/spruce-hub/nuxt-modules/compare/v1.7.0...v1.7.1) (2023-08-22)
+
+### 🐛Bug Fixes
+
+- **fetch:** 代理请求中添加请求头 ([a31802b](https://github.com/spruce-hub/nuxt-modules/commit/a31802b273d3f822238693a70d24ae2ce3758877))
+
+### 🛠️Chore
+
+- update deps ([62a5556](https://github.com/spruce-hub/nuxt-modules/commit/62a555619febddce0af100f19f7573c2a1b50619))
+
 # [1.7.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.6.1...v1.7.0) (2023-08-16)
 
 ### ✨Features
