@@ -58,6 +58,7 @@ export default defineNuxtPlugin(() => {
   )
 
   /**
+   * @deprecated 请使用 `useToLogin` 代替
    * @Describe 记录一个路由地址并跳转到登录页
    * @param {string} fullPath 记录的路由地址
    */
@@ -69,14 +70,18 @@ export default defineNuxtPlugin(() => {
   }
 
   /**
+   * @deprecated 请使用 `useLoginSuccess` 代替
    * @Describe 登录成功后调用
    * @param {string} token 将要写入 cookie 的值， name 为 `nuxtRoute.cookieName`
    * @param {CookieOptions | string} options 当为 object 类型时，作为 useCookie 的 options；当为 string 类型时，作为重定向路由地址
    * @param {string} to 重定向路由地址，该项具有最高优先级
    */
   function loginSuccess(token: string): void
+  /** @deprecated 请使用 useLoginSuccess 代替 */
   function loginSuccess(token: string, to: string): void
+  /** @deprecated 请使用 useLoginSuccess 代替 */
   function loginSuccess(token: string, options: CookieOptions, to?: string): void
+  /** @deprecated 请使用 useLoginSuccess 代替 */
   function loginSuccess(token: string, options?: CookieOptions | string, to?: string) {
     useCookie(`${nuxtRoute.cookieName}`).value = token
 

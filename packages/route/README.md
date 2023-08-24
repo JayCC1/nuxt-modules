@@ -43,34 +43,31 @@ export default defineNuxtConfig({
 
 ### Helper
 
-- `$toLogin(fullPath: string): void`
+- `useToLogin(fullPath: string): void`
 
   - 记住路由地址并跳转到登录页
+  - 登录成功后如果调用了 `useLoginSuccess` 将跳转到记住的地址
 
-- `$loginSuccess(token: string, options?: CookieOptions | string, to?: string): void`
+- `useLoginSuccess(token: string, options?: CookieOptions | string, to?: string): void`
 
   - `token` 将要写入 cookie 的值， name 为 `nuxtRoute.cookieName`
   - `options` 当为 `object` 类型时，作为 `useCookie` 的 `options`；当为 `string` 类型时，作为重定向路由地址
   - `to` 重定向到该路由地址。具有最高优先级，哪怕 `options` 为 `string` 类型
-  - 当 `options` 不为 `string` 类型，且 `to` 不存在时，则判断是否存在被拦截的路由地址或被 `$toLogin` 记录的路由地址，存在则重定向到被拦截的路由地址，不存在则重定向到首页
+  - 当 `options` 不为 `string` 类型，且 `to` 不存在时，则判断是否存在被拦截的路由地址或被 `useToLogin` 记录的路由地址，存在则重定向到被拦截的路由地址，不存在则重定向到首页
 
 ```ts
-const { $toLogin } = useNuxtApp()
-
 // 记住 `/about` 路由地址并跳转到登录页
-$toLogin('/about')
+useToLogin('/about')
 ```
 
 ```ts
-const { $loginSuccess } = useNuxtApp()
-
 const login = (token) => {
   // options 为 useCookie 的第二个参数，用于设置 cookie 的其他属性
   const options = {
     maxAge: 3600,
   }
 
-  $loginSuccess(token, options)
+  useLoginSuccess(token, options)
 }
 ```
 
