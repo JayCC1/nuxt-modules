@@ -1,3 +1,9 @@
+# [1.8.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.7.1...v1.8.0) (2023-08-24)
+
+### ✨Features
+
+- **route:** 新增助手 `useToLogin` `useLoginSuccess` 以代替 `$toLogin` `$loginSuccess` ([94767c9](https://github.com/spruce-hub/nuxt-modules/commit/94767c9d2dcdff590615de29de3f3145a04909b6))
+
 ## [1.7.1](https://github.com/spruce-hub/nuxt-modules/compare/v1.7.0...v1.7.1) (2023-08-22)
 
 # [1.7.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.6.1...v1.7.0) (2023-08-16)
