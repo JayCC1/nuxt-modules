@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.9.0...v1.10.0) (2023-08-29)
+
+### ✨Features
+
+- **route:** 登录成功后，如果登录时间戳不存在，则保存 ([4a4a8b6](https://github.com/spruce-hub/nuxt-modules/commit/4a4a8b657a0e9bd19b2525a361b3fdca76ee03fe))
+- **route:** 新增鉴权方案 ([91d0950](https://github.com/spruce-hub/nuxt-modules/commit/91d09504a8134a7ebf52b45b3f7a84af747b8640))
+
 # [1.9.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.8.0...v1.9.0) (2023-08-29)
 
 ### ✨Features
