@@ -54,6 +54,7 @@ export default defineNuxtConfig({
   - `options` 当为 `object` 类型时，作为 `useCookie` 的 `options`；当为 `string` 类型时，作为重定向路由地址
   - `to` 重定向到该路由地址。具有最高优先级，哪怕 `options` 为 `string` 类型
   - 当 `options` 不为 `string` 类型，且 `to` 不存在时，则判断是否存在被拦截的路由地址或被 `useToLogin` 记录的路由地址，存在则重定向到被拦截的路由地址，不存在则重定向到首页
+  - cookie 中的 `${nuxtRoute.cookieName}_timestamp` 记录了登录时间
 
 ```ts
 // 记住 `/about` 路由地址并跳转到登录页
