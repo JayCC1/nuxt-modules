@@ -56,6 +56,12 @@ export default defineNuxtConfig({
   - 当 `options` 不为 `string` 类型，且 `to` 不存在时，则判断是否存在被拦截的路由地址或被 `useToLogin` 记录的路由地址，存在则重定向到被拦截的路由地址，不存在则重定向到首页
   - cookie 中的 `${nuxtRoute.cookieName}_timestamp` 记录了登录时间
 
+- `useSaveTokenTimestamp(timestamp: string): boolean`
+
+  - param `timestamp`： cookie 中 name 为 `${nuxtRoute.cookieName}_timestamp` 的值
+  - return `false` 校验失败，已被重新登录或第一次登录，考虑是否已变更用户
+  - return `true` 校验通过，本次登录仍然有效
+
 ```ts
 // 记住 `/about` 路由地址并跳转到登录页
 useToLogin('/about')
