@@ -1,3 +1,13 @@
+# [1.9.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.8.0...v1.9.0) (2023-08-29)
+
+### ✨Features
+
+- **route:** 登录成功时记录登录时间 ([2a26a4d](https://github.com/spruce-hub/nuxt-modules/commit/2a26a4da92322c09012ad388c0d769cb6f24fe1b))
+
+### 🛠️Chore
+
+- 更新描述 ([dc36ee9](https://github.com/spruce-hub/nuxt-modules/commit/dc36ee9ae97109c3d862a48ef29d919c2cfacf99))
+
 # [1.8.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.7.1...v1.8.0) (2023-08-24)
 
 ### ✨Features
