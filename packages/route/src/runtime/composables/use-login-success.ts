@@ -35,13 +35,18 @@ export function useLoginSuccess(token: string, to: string): void
  */
 export function useLoginSuccess(token: string, options: CookieOptions, to?: string): void
 export function useLoginSuccess(token: string, options?: CookieOptions | string, to?: string) {
+  const timestamp = new Date().getTime()
+
   useCookie(`${nuxtRoute.cookieName}`).value = token
+  useCookie<number>(`${nuxtRoute.cookieName}_timestamp`).value = timestamp
 
   const nextPath = useCookie<string>('next_path', { maxAge: 10 })
   let toPath = to || nextPath.value || '/'
 
   if (typeof options === 'object') {
     useCookie(`${nuxtRoute.cookieName}`, options).value = token
+    useCookie<number>(`${nuxtRoute.cookieName}_timestamp`, options).value = timestamp
+
     toPath = to || toPath
   } else if (typeof options === 'string') {
     toPath = to || options
