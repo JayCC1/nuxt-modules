@@ -5,6 +5,7 @@ import { navigateTo, useCookie } from '#app'
 import nuxtRoute from '#nuxtRoute'
 
 import type { CookieOptions } from '#app'
+import { useSaveTokenTimestamp } from './use-auth'
 
 const verifyPath = (to: string, authPath: string[]): string[] => {
   const path = to.split('?')[0]
@@ -39,6 +40,7 @@ export function useLoginSuccess(token: string, options?: CookieOptions | string,
 
   useCookie(`${nuxtRoute.cookieName}`).value = token
   useCookie<number>(`${nuxtRoute.cookieName}_timestamp`).value = timestamp
+  useSaveTokenTimestamp(timestamp)
 
   const nextPath = useCookie<string>('next_path', { maxAge: 10 })
   let toPath = to || nextPath.value || '/'
