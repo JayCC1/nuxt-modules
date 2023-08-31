@@ -43,10 +43,11 @@ export default defineNuxtConfig({
 
 ### Helper
 
-- `useToLogin(fullPath: string): void`
+- `useToLogin(fullPath: string, open?: '_blank'): void`
 
   - 记住路由地址并跳转到登录页
   - 登录成功后如果调用了 `useLoginSuccess` 将跳转到记住的地址
+  - param `open` 是否新窗口(标签页)打开
 
 - `useLoginSuccess(token: string, options?: CookieOptions | string, to?: string): void`
 
