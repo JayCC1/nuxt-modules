@@ -65,8 +65,9 @@ declare module '#app' {
      * @deprecated 请使用 useToLogin 代替
      * @Describe 记录一个路由地址并跳转到登录页
      * @param {string} fullPath 记录的路由地址
+     * @param {string} open 新窗口(标签页)打开登录页面
      */
-    $toLogin(fullPath: string): void
+    $toLogin(fullPath: string, open?: '_blank'): void
   }
 }
 declare module 'vue' {
@@ -90,8 +91,9 @@ declare module 'vue' {
      * @deprecated 请使用 useToLogin 代替
      * @Describe 记录一个路由地址并跳转到登录页
      * @param {string} fullPath 记录的路由地址
+     * @param {string} open 新窗口(标签页)打开登录页面
      */
-    $toLogin(fullPath: string): void
+    $toLogin(fullPath: string, open?: '_blank'): void
   }
 }
 declare module "@vue/runtime-core" {
@@ -115,8 +117,9 @@ declare module "@vue/runtime-core" {
      * @deprecated 请使用 useToLogin 代替
      * @Describe 记录一个路由地址并跳转到登录页
      * @param {string} fullPath 记录的路由地址
+     * @param {string} open 新窗口(标签页)打开登录页面
      */
-    $toLogin(fullPath: string): void
+    $toLogin(fullPath: string, open?: '_blank'): void
   }
 }
 export {}`,
