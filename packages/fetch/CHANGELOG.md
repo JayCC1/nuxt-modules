@@ -1,4 +1,8 @@
-# [1.10.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.9.0...v1.10.0) (2023-08-29)
+# [1.11.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.9.0...v1.11.0) (2023-08-31)
+
+### 🛠️Chore
+
+- update deps ([e0becf0](https://github.com/spruce-hub/nuxt-modules/commit/e0becf073db97786df23048bbb2ce432e532f496))
 
 # [1.9.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.8.0...v1.9.0) (2023-08-29)
 

@@ -1,9 +1,15 @@
-# [1.10.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.9.0...v1.10.0) (2023-08-29)
+# [1.11.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.9.0...v1.11.0) (2023-08-31)
 
 ### ✨Features
 
+- **route:** 添加类型 ([2cb1f8b](https://github.com/spruce-hub/nuxt-modules/commit/2cb1f8b7a3ff0f7f95b636ca80dd2881910e7130))
+- **route:** `useToLogin` 支持在新窗口打开登录页 ([40425c4](https://github.com/spruce-hub/nuxt-modules/commit/40425c4abf8fab76c298f1e03f6bd6de6ddf1070))
 - **route:** 登录成功后，如果登录时间戳不存在，则保存 ([4a4a8b6](https://github.com/spruce-hub/nuxt-modules/commit/4a4a8b657a0e9bd19b2525a361b3fdca76ee03fe))
 - **route:** 新增鉴权方案 ([91d0950](https://github.com/spruce-hub/nuxt-modules/commit/91d09504a8134a7ebf52b45b3f7a84af747b8640))
+
+### 🛠️Chore
+
+- update deps ([e0becf0](https://github.com/spruce-hub/nuxt-modules/commit/e0becf073db97786df23048bbb2ce432e532f496))
 
 # [1.9.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.8.0...v1.9.0) (2023-08-29)
 
