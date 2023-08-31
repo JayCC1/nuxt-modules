@@ -24,6 +24,9 @@ interface Code {
 const bannerData = ref<BannerData | null>(null)
 const getBannerData = async () => {
   // 注入响应数据的类型：Res
+  const timestamp = useCookie<number>('access_token_timestamp')
+  const a = useValidateToken(timestamp.value)
+  console.log(a)
   const { data, pending, error, refresh } = await useFetch<BannerData>('/api/setting/banner')
   bannerData.value = data.value
 }

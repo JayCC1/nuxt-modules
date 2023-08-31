@@ -1,10 +1,11 @@
 export const useAuth = () => {
-  const { $loginSuccess } = useNuxtApp()
   const token = useState('token', () => useCookie('access_token').value || '')
 
   function login(t: string) {
     token.value = t
-    $loginSuccess(t, { maxAge: 3600 })
+    useLoginSuccess(t, { maxAge: 3600 })
+    const timestamp = useCookie<number>('access_token_timestamp')
+    useSaveTokenTimestamp(timestamp.value)
   }
 
   function logout() {
