@@ -9,7 +9,7 @@
   "devDependencies": {
     "@spruce-hub/nuxt-fetch": "workspace:*",
     "@spruce-hub/nuxt-route": "workspace:*",
-    "nuxt": "^3.6.5",
+    "nuxt": "^3.7.0",
     "sass": "^1.66.1",
     "vue": "^3.3.4"
   },
