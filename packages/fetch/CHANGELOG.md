@@ -1,3 +1,5 @@
+## [1.11.1](https://github.com/spruce-hub/nuxt-modules/compare/v1.11.0...v1.11.1) (2023-09-26)
+
 # [1.11.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.9.0...v1.11.0) (2023-08-31)
 
 ### 🛠️Chore

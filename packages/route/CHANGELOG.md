@@ -1,3 +1,9 @@
+## [1.11.1](https://github.com/spruce-hub/nuxt-modules/compare/v1.11.0...v1.11.1) (2023-09-26)
+
+### 🐛Bug Fixes
+
+- **route:** 重定向之后结束当前代码块的执行 ([2bafdef](https://github.com/spruce-hub/nuxt-modules/commit/2bafdefc755166db44e43e1b68f654c36e425b43))
+
 # [1.11.0](https://github.com/spruce-hub/nuxt-modules/compare/v1.9.0...v1.11.0) (2023-08-31)
 
 ### ✨Features
