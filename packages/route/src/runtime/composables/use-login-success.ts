@@ -57,5 +57,5 @@ export function useLoginSuccess(token: string, options?: CookieOptions | string,
   toPath = verifyPath(toPath, nuxtRoute.excludePath).length > 0 ? '/' : toPath
 
   nextPath.value = ''
-  navigateTo(toPath)
+  return navigateTo(toPath)
 }

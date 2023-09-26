@@ -20,6 +20,6 @@ export function useToLogin(fullPath: string, open?: '_blank') {
     const host = window.location.host
     window.open(`${protocol}//${host}${nuxtRoute.loginPath}`, open)
   } else {
-    navigateTo(nuxtRoute.loginPath)
+    return navigateTo(nuxtRoute.loginPath)
   }
 }
